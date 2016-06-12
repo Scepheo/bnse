@@ -1,3 +1,8 @@
+----------------------------------------------------------------------------------------------------
+-- bnse_randomize.lua
+-- Component containing randomization helper functions.
+----------------------------------------------------------------------------------------------------
+
 local randomize = {}
 
 local function addModule(name)

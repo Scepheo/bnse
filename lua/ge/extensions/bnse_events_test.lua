@@ -1,3 +1,8 @@
+----------------------------------------------------------------------------------------------------
+-- bnse_events_test.lua
+-- This module logs all bnse custom events to the console, for debugging purposes.
+----------------------------------------------------------------------------------------------------
+
 local function onVehicleSpawn(id)
 	log('I', 'bnse_events_test', 'onVehicleSpawn, id=' .. id)
 end

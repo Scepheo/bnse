@@ -1,13 +1,24 @@
--- Load events
+----------------------------------------------------------------------------------------------------
+-- bnse.lua
+-- This is the main ge module. It both loads all other modules and exposes bnse's features.
+----------------------------------------------------------------------------------------------------
+
+
+-- Load event modules
+----------------------------------------------------------------------------------------------------
 extensions.loadModule('bnse_events_collision')
 extensions.loadModule('bnse_events_physics')
 extensions.loadModule('bnse_events_tick')
-extensions.loadModule('bnse_events_test')
+
+-- Logging of events for debugging purposes
+-- extensions.loadModule('bnse_events_test')
+
 
 -- Main module
+----------------------------------------------------------------------------------------------------
 local main = {}
 
-local function addModule(name)
+local function loadComponent(name)
 	local newModule = require(name)
 	
 	for k, v in pairs(newModule) do
@@ -15,9 +26,9 @@ local function addModule(name)
 	end
 end
 
-addModule('bnse_randomize')
-addModule('bnse_timers')
-addModule('bnse_triggers')
+loadComponent('bnse_randomize')
+loadComponent('bnse_timers')
+loadComponent('bnse_triggers')
 
 main.onPreRender = function(dt)
 	main.timers.update(dt)

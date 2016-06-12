@@ -1,9 +1,15 @@
 ----------------------------------------------------------------------------------------------------
+-- bnse_events_physics.lua
+-- This module exposes the following physics-related events: onVehicleSpawn, onVehicleReset and
+-- onVehicleDespawn.
+----------------------------------------------------------------------------------------------------
+
+
 -- Code
 ----------------------------------------------------------------------------------------------------
 
+-- List of all currently loaded vehicles
 local vehicleList = {}
-
 
 local function onVehicleResetted(id)
 	if vehicleList[id] then
@@ -42,8 +48,6 @@ function onPhysicsEngineEvent()
 end
 
 
-
-----------------------------------------------------------------------------------------------------
 -- Interface
 ----------------------------------------------------------------------------------------------------
 
