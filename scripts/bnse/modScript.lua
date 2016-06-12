@@ -1,0 +1,1 @@
+extensions.loadModule('bnse')
