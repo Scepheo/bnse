@@ -13,6 +13,10 @@ extensions.loadModule('bnse_events_tick')
 -- Logging of events for debugging purposes
 -- extensions.loadModule('bnse_events_test')
 
+-- Load resettable module
+----------------------------------------------------------------------------------------------------
+require('resettable_load')
+
 
 -- Main module
 ----------------------------------------------------------------------------------------------------
