@@ -11,7 +11,7 @@
 local timeThreshold = 1
 
 -- Minimum damage taken to trigger an event
-local damageThreshold = 50
+local damageThreshold = 25
 
 
 -- Code
@@ -39,11 +39,11 @@ local function updateGFX(dt)
 	if damageTaken > damageThreshold then
 		currentTime = 0
 		
-		if not canTrigger then
+		if canTrigger then
 			sendEvent()
 			canTrigger = false
 		end
-	elseif canTrigger then	
+	elseif not canTrigger then	
 		currentTime = currentTime + dt
 		
 		if currentTime > timeThreshold then
