@@ -44,6 +44,8 @@ local function randomizeVehicle(name, validCarTypes)
 		]]..name..[[.color = "]] .. color .. [[";
 		]]..name..[[.requestReload();
 	]])
+	
+	return config
 end
 
 
