@@ -11,7 +11,7 @@
 local timeThreshold = 1
 
 -- Minimum damage taken to trigger an event
-local damageThreshold = 25
+local damageThreshold = 10
 
 
 -- Code
