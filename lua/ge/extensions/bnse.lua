@@ -3,6 +3,9 @@
 -- This is the main ge module. It both loads all other modules and exposes bnse's features.
 ----------------------------------------------------------------------------------------------------
 
+-- Log version number, for debugging info
+log('I', 'bnse', 'Loading bnse, version 0.1.2')
+
 
 -- Load event modules
 ----------------------------------------------------------------------------------------------------
