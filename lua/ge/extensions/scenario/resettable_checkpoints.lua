@@ -64,23 +64,20 @@ end
 
 local function onRaceStart()
 	running = true
-	
-	-- Set the reset location to the player location
-	log('I', 'onRaceStart', 'storing reset position')
-	TorqueScript.eval('$resetPosition = scenario_player0.position;')
-	TorqueScript.eval('$resetRotation = scenario_player0.rotation;')
-	
-	-- Remember the starting location, for actual scenario restarts
-	log('I', 'onRaceStart', 'storing start position')
-	TorqueScript.eval('$startPosition = scenario_player0.position;')
-	TorqueScript.eval('$startRotation = scenario_player0.rotation;')
 end
 
 local function onScenarioChange(scenario)
-	log('I', 'onScenarioChange', 'scenario.state: ' .. scenario.state)
-	
 	if scenario.state == 'pre-start' then
+		-- Enable resetting
 		scenarioStarted = true
+			
+		-- Set the reset location to the player location
+		TorqueScript.eval('$resetPosition = scenario_player0.position;')
+		TorqueScript.eval('$resetRotation = scenario_player0.rotation;')
+		
+		-- Remember the starting location, for actual scenario restarts
+		TorqueScript.eval('$startPosition = scenario_player0.position;')
+		TorqueScript.eval('$startRotation = scenario_player0.rotation;')
 	end
 end
 
