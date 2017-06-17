@@ -4,7 +4,7 @@
 ----------------------------------------------------------------------------------------------------
 
 -- Log version number, for debugging info
-log('I', 'bnse', 'Loading bnse, version 0.1.2')
+log('I', 'bnse', 'Loading bnse, version 0.1.3')
 
 
 -- Load event modules
