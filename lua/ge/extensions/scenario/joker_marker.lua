@@ -82,15 +82,15 @@ local function render()
     local camdistSqt = markerPosition:squaredDistance(camPos)
     local markerAlpha = camdistSqt / 2000
     if markerAlpha > 1 then markerAlpha = 1 end
-    scenetree.jokerMarker.instanceColor = ColorF( 0.1, 1, 0.1, markerAlpha)
-    scenetree.jokerMarkerBase.instanceColor = ColorF( 1, 1, 1, markerAlpha * 0.8)
+    scenetree.jokerMarker.instanceColor = ColorF( 0.1, 1, 0.1, markerAlpha):asLinear4F()
+    scenetree.jokerMarkerBase.instanceColor = ColorF( 1, 1, 1, markerAlpha * 0.8):asLinear4F()
   end
 
   if scenetree.jokerMarkerNext and markerNextPosition then
     local camdistSqt = markerNextPosition:squaredDistance(camPos)
     local markerAlpha = camdistSqt / 2000
     if markerAlpha > 1 then markerAlpha = 1 end
-    scenetree.jokerMarkerNext.instanceColor = ColorF( 0.3, 0.3, 0.3, markerAlpha * 0.5)
+    scenetree.jokerMarkerNext.instanceColor = ColorF( 0.3, 0.3, 0.3, markerAlpha * 0.5):asLinear4F()
   end
 
 end

@@ -9,9 +9,9 @@ log('I', 'bnse', 'Loading bnse, version 0.1.3')
 
 -- Load event modules
 ----------------------------------------------------------------------------------------------------
-extensions.loadModule('bnse_events_collision')
-extensions.loadModule('bnse_events_physics')
-extensions.loadModule('bnse_events_tick')
+registerCoreModule('bnse_events_collision')
+registerCoreModule('bnse_events_physics')
+registerCoreModule('bnse_events_tick')
 
 -- Logging of events for debugging purposes
 -- extensions.loadModule('bnse_events_test')

@@ -163,15 +163,12 @@ local function onScenarioChange(sc)
 		end
 	end
 	
-	jokerSecondIndex = jokerStartIndex + 1
+	local jokerSecondIndex = jokerStartIndex + 1
 	if jokerSecondIndex > #scenario.lapConfig then jokerSecondIndex = 1 end
-	
 	jokerSecondWaypoint = scenario.lapConfig[jokerSecondIndex]
 	
-	
-	jokerSetNextIndex = jokerStartIndex - 1
+	local jokerSetNextIndex = jokerStartIndex - 1
 	if jokerSetNextIndex < 1 then jokerSetNextIndex = #scenario.lapConfig end
-	
 	jokerWaypointSetNext = scenario.lapConfig[jokerSetNextIndex]
 
   elseif scenario.state == 'running' then
@@ -204,7 +201,7 @@ local function onPreRender(dt)
   
 end
 
-local function onRaceWaypoint(data)
+local function onRaceWaypointReached(data)
 	
 	if data.waypointName == jokerWaypointBefore and not jokerLapDone then
 	
@@ -240,7 +237,7 @@ end
 M.onScenarioChange = onScenarioChange
 M.onPreRender = onPreRender
 M.onScenarioVehicleTrigger = onScenarioVehicleTrigger
-M.onRaceWaypoint = onRaceWaypoint
+M.onRaceWaypointReached = onRaceWaypointReached
 M.onRaceResult = onRaceResult
 
 return M

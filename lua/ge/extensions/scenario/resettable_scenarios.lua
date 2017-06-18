@@ -6,7 +6,7 @@
 ----------------------------------------------------------------------------------------------------
 
 -- Load the original scenarios module
-local scenarios = require('scenarios')
+local scenarios = require('lua.ge.extensions.scenario.scenarios')`
 
 -- Remember the original handler, so we can still use it ourselves
 local originalPhysicsEventHandler = scenarios.onPhysicsEngineEvent
